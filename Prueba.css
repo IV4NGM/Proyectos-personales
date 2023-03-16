@@ -7,7 +7,11 @@ body{
     overflow-y: scroll;
 }
 
-#sol{
+.probsol{
+    border-style: solid;
+}
+
+.sol{
   display: none;
 }
 

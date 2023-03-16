@@ -1,6 +1,6 @@
-function myFunction() {
-    var x = document.getElementById('sol');
-    var y = document.getElementById('botonsolucion');
+function myFunction(botonid, solid) {
+    var x = document.getElementById(solid);
+    var y = document.getElementById(botonid);
     if (x.style.display == 'block') {
       x.style.display = 'none';
       y.innerHTML='Mostrar Solución'
