@@ -13,24 +13,23 @@
     <title>Problemas de matemáticas</title>
 </head>
 <body>
-
-<h1 style= text-align:center>Problemas de matemáticas</h1>
-<div class="probsol">
-<p><strong>Problema 1.</strong> Sea \(A\) el conjunto de los vértices de un \(n\)-ágono regular de \(1999\) lados y 
-    consideremos todos los triángulos que se pueden formar cuyos vértices están en \(A\). ¿Cuántos tipos de triángulos diferentes
-     (no congruentes) pueden encontrarse?</p>
-<button onclick="myFunction('botonsolucion1', 'sol1')" id="botonsolucion1" class="button">Mostrar Solución</button>
-<div class="sol" id="sol1">
-<p> <strong>Solución. </strong>Puesto que el polígono es un \(n\)-ágono regular, se puede inscribir en una circunferencia. De aquí es fácil ver que dos triángulos con vértices en \(A\) son congruentes si y solo si tienen todos sus ángulos iguales. </p>
-<p> Ahora bien, consideremos un triángulo con vértices en \(A\) y ángulos de magnitudes \(a\), \(b\) y \(c\) (medidos en grados). Al ser ángulos inscritos en la circunferencia circunscrita al \(n\)-ágono regular de \(1999\) lados, cada uno de ellos es de la forma \(\frac{n}{1999}\cdot 180^{\circ}\), con \(n\) un entero positivo, y cumplen además que \(a+b+c=180^{\circ}\). </p>
-<p> Así pues, si \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), entonces \(m+n+p=1999\). De esta manera, a cada triángulo con vértices en \(A\) se le puede asignar una terna no ordenada \((m, n, p)\) de enteros positivos cuya suma es \(1999\). </p>
-<p> Recíprocamente, si \((m, n, p)\) es una terna no ordenada de enteros positivos cuya suma es \(1999\), definiendo \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), se tiene que \(a+b+c=180^{\circ}\), por lo que se puede encontrar un triángulo con vértices en \(A\) con ángulos de magnitudes \(a\), \(b\) y \(c\). </p>
-<p> Por lo tanto, el problema es equivalente a contar cuántas ternas no ordenadas de enteros positivos \((m, n, p)\) existen tales que \(m+n+p=1999\). Evidentemente no existe ninguna terna de enteros positivos todos iguales cuya suma es \(1999\). Contaremos primero las ternas \((m, n, p)\) con dos números iguales, digamos \(m=n\). De este modo, \(p\) debe cumplir que \(p=1999-2m\). Puesto que \(p\) debe ser un entero positivo, entonces \(m=n\leq 999\). Luego, existen \(999\) ternas no ordenadas con dos números iguales que cumplen las condiciones planteadas. </p>
-<p> Contemos ahora las ternas no ordenadas que tienen todos sus números distintos. Para ello, contaremos todas las ternas ordenadas de enteros positivos \((m, n, p)\) cuya suma sea \(1999\). Definamos \(m'=m-1\), \(n'=n-1\) y \(p'=p-1\). Luego, \(m',n',p'\geq 0\), y \(m'+n'+p'=1996\). Por consiguiente, podemos interpretar este conteo como el número de formas en que se pueden dividir \(1996\) objetos en \(3\) espacios. Usando el método de separadores, hay que acomodar \(2\) separadores en \(1998\) espacios, lo cual se puede hacer de \(\binom{1998}{2}=\frac{1998(1997)}{2}=1995003\) formas. </p>
-<p> En el conteo anterior, cada terna no ordenada con dos números iguales se está considerando \(3\) veces, por lo que existen \(1995003-3(999)=1992006\) ternas ordenadas con todos sus elementos distintos. Puesto que los números de cada una de estas ternas se pueden ordenar de \(3!=6\) formas, hay \(\frac{1992006}{6}=332001\) ternas no ordenadas con todos sus elementos distintos cuya suma es \(1999\). </p>
-<p> Por lo tanto, hay \(999+332001=333000\) ternas que cumplen con lo pedido, por lo que existen \(333000\) tipos de triángulos diferentes (no congruentes) que satisfacen las condiciones del problema.</p>
-</div>
-</div>
+    <h1 style= text-align:center>Problemas de matemáticas</h1>
+    <div class="probsol">
+        <p><strong>Problema 1.</strong> Sea \(A\) el conjunto de los vértices de un \(n\)-ágono regular de \(1999\) lados y 
+            consideremos todos los triángulos que se pueden formar cuyos vértices están en \(A\). ¿Cuántos tipos de triángulos diferentes
+            (no congruentes) pueden encontrarse?</p>
+        <button onclick="myFunction('botonsolucion1', 'sol1')" id="botonsolucion1" class="button">Mostrar Solución</button>
+            <div class="sol" id="sol1">
+                <p> <strong>Solución. </strong>Puesto que el polígono es un \(n\)-ágono regular, se puede inscribir en una circunferencia. De aquí es fácil ver que dos triángulos con vértices en \(A\) son congruentes si y solo si tienen todos sus ángulos iguales. </p>
+                <p> Ahora bien, consideremos un triángulo con vértices en \(A\) y ángulos de magnitudes \(a\), \(b\) y \(c\) (medidos en grados). Al ser ángulos inscritos en la circunferencia circunscrita al \(n\)-ágono regular de \(1999\) lados, cada uno de ellos es de la forma \(\frac{n}{1999}\cdot 180^{\circ}\), con \(n\) un entero positivo, y cumplen además que \(a+b+c=180^{\circ}\). </p>
+                <p> Así pues, si \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), entonces \(m+n+p=1999\). De esta manera, a cada triángulo con vértices en \(A\) se le puede asignar una terna no ordenada \((m, n, p)\) de enteros positivos cuya suma es \(1999\). </p>
+                <p> Recíprocamente, si \((m, n, p)\) es una terna no ordenada de enteros positivos cuya suma es \(1999\), definiendo \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), se tiene que \(a+b+c=180^{\circ}\), por lo que se puede encontrar un triángulo con vértices en \(A\) con ángulos de magnitudes \(a\), \(b\) y \(c\). </p>
+                <p> Por lo tanto, el problema es equivalente a contar cuántas ternas no ordenadas de enteros positivos \((m, n, p)\) existen tales que \(m+n+p=1999\). Evidentemente no existe ninguna terna de enteros positivos todos iguales cuya suma es \(1999\). Contaremos primero las ternas \((m, n, p)\) con dos números iguales, digamos \(m=n\). De este modo, \(p\) debe cumplir que \(p=1999-2m\). Puesto que \(p\) debe ser un entero positivo, entonces \(m=n\leq 999\). Luego, existen \(999\) ternas no ordenadas con dos números iguales que cumplen las condiciones planteadas. </p>
+                <p> Contemos ahora las ternas no ordenadas que tienen todos sus números distintos. Para ello, contaremos todas las ternas ordenadas de enteros positivos \((m, n, p)\) cuya suma sea \(1999\). Definamos \(m'=m-1\), \(n'=n-1\) y \(p'=p-1\). Luego, \(m',n',p'\geq 0\), y \(m'+n'+p'=1996\). Por consiguiente, podemos interpretar este conteo como el número de formas en que se pueden dividir \(1996\) objetos en \(3\) espacios. Usando el método de separadores, hay que acomodar \(2\) separadores en \(1998\) espacios, lo cual se puede hacer de \(\binom{1998}{2}=\frac{1998(1997)}{2}=1995003\) formas. </p>
+                <p> En el conteo anterior, cada terna no ordenada con dos números iguales se está considerando \(3\) veces, por lo que existen \(1995003-3(999)=1992006\) ternas ordenadas con todos sus elementos distintos. Puesto que los números de cada una de estas ternas se pueden ordenar de \(3!=6\) formas, hay \(\frac{1992006}{6}=332001\) ternas no ordenadas con todos sus elementos distintos cuya suma es \(1999\). </p>
+                <p> Por lo tanto, hay \(999+332001=333000\) ternas que cumplen con lo pedido, por lo que existen \(333000\) tipos de triángulos diferentes (no congruentes) que satisfacen las condiciones del problema.</p>
+            </div>
+    </div>
 </body>
 <footer>Iván G M</footer>
 </html>
