@@ -4,12 +4,12 @@ function myFunction(botonid, solid) {
     if (x.style.display == 'block') {
       x.style.display = 'none';
       y.innerHTML='Mostrar Solución'
-      y.classList.remove('button2')
-      y.classList.add('button')
+      y.classList.remove('b2')
+      y.classList.add('b1')
     } else {
       x.style.display = 'block';
       y.innerHTML='Ocultar Solución'
-      y.classList.remove('button')
-      y.classList.add('button2')
+      y.classList.remove('b1')
+      y.classList.add('b2')
     }
   }
