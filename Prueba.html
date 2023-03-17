@@ -14,22 +14,196 @@
 </head>
 <body>
     <h1 style= text-align:center>Problemas de matemáticas</h1>
+    <h2 style= text-align:center>Selectivo 13 OMM 1999</h2>
     <div class="probsol">
-        <p><strong>Problema 1.</strong> Sea \(A\) el conjunto de los vértices de un \(n\)-ágono regular de \(1999\) lados y 
-            consideremos todos los triángulos que se pueden formar cuyos vértices están en \(A\). ¿Cuántos tipos de triángulos diferentes
-            (no congruentes) pueden encontrarse?</p>
+        <p><strong>Problema 1.</strong>     Sea \(S(x)\) definida como sigue:
+            \[
+            S(x)=\left\lfloor\frac{x}{19}\right\rfloor+\left\lfloor\frac{2x}{19}\right\rfloor+\cdots+\left\lfloor\frac{18x}{19}\right\rfloor.
+            \]
+        </p>
+        <ol>
+            <li>Demuestra que si \(x\) es entero entonces \(9\) divide a \(S(x)\).</li>
+            <li>Si \(x\) es un número real, \(0\leq x\leq 19\), ¿cuántos posibles valores tiene \(S(x)\)?</li>
+        </ol>       
         <button onclick="myFunction('botonsolucion1', 'sol1')" id="botonsolucion1" class="button b1">Mostrar Solución</button>
             <div class="sol" id="sol1">
-                <p> <strong>Solución. </strong>Puesto que el polígono es un \(n\)-ágono regular, se puede inscribir en una circunferencia. De aquí es fácil ver que dos triángulos con vértices en \(A\) son congruentes si y solo si tienen todos sus ángulos iguales. </p>
-                <p> Ahora bien, consideremos un triángulo con vértices en \(A\) y ángulos de magnitudes \(a\), \(b\) y \(c\) (medidos en grados). Al ser ángulos inscritos en la circunferencia circunscrita al \(n\)-ágono regular de \(1999\) lados, cada uno de ellos es de la forma \(\frac{n}{1999}\cdot 180^{\circ}\), con \(n\) un entero positivo, y cumplen además que \(a+b+c=180^{\circ}\). </p>
-                <p> Así pues, si \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), entonces \(m+n+p=1999\). De esta manera, a cada triángulo con vértices en \(A\) se le puede asignar una terna no ordenada \((m, n, p)\) de enteros positivos cuya suma es \(1999\). </p>
-                <p> Recíprocamente, si \((m, n, p)\) es una terna no ordenada de enteros positivos cuya suma es \(1999\), definiendo \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), se tiene que \(a+b+c=180^{\circ}\), por lo que se puede encontrar un triángulo con vértices en \(A\) con ángulos de magnitudes \(a\), \(b\) y \(c\). </p>
-                <p> Por lo tanto, el problema es equivalente a contar cuántas ternas no ordenadas de enteros positivos \((m, n, p)\) existen tales que \(m+n+p=1999\). Evidentemente no existe ninguna terna de enteros positivos todos iguales cuya suma es \(1999\). Contaremos primero las ternas \((m, n, p)\) con dos números iguales, digamos \(m=n\). De este modo, \(p\) debe cumplir que \(p=1999-2m\). Puesto que \(p\) debe ser un entero positivo, entonces \(m=n\leq 999\). Luego, existen \(999\) ternas no ordenadas con dos números iguales que cumplen las condiciones planteadas. </p>
-                <p> Contemos ahora las ternas no ordenadas que tienen todos sus números distintos. Para ello, contaremos todas las ternas ordenadas de enteros positivos \((m, n, p)\) cuya suma sea \(1999\). Definamos \(m'=m-1\), \(n'=n-1\) y \(p'=p-1\). Luego, \(m',n',p'\geq 0\), y \(m'+n'+p'=1996\). Por consiguiente, podemos interpretar este conteo como el número de formas en que se pueden dividir \(1996\) objetos en \(3\) espacios. Usando el método de separadores, hay que acomodar \(2\) separadores en \(1998\) espacios, lo cual se puede hacer de \(\binom{1998}{2}=\frac{1998(1997)}{2}=1995003\) formas. </p>
-                <p> En el conteo anterior, cada terna no ordenada con dos números iguales se está considerando \(3\) veces, por lo que existen \(1995003-3(999)=1992006\) ternas ordenadas con todos sus elementos distintos. Puesto que los números de cada una de estas ternas se pueden ordenar de \(3!=6\) formas, hay \(\frac{1992006}{6}=332001\) ternas no ordenadas con todos sus elementos distintos cuya suma es \(1999\). </p>
+                <p><strong>Solución.</strong></p>
+                <p><strong>1.</strong> Para cada real \(x\), definimos su parte fraccionaria como \(\left\lbrace x \right\rbrace=x-\lfloor x\rfloor\). De esta manera, podemos reexpresar \(S(x)\) como:
+                \[
+                \begin{split}
+                S(x)&=\frac{x}{19}-\left\lbrace \frac{x}{19} \right\rbrace+\frac{2x}{19}-\left\lbrace \frac{2x}{19} \right\rbrace+\cdots+\frac{18x}{19}-\left\lbrace \frac{18x}{19} \right\rbrace\\
+                &=\frac{x}{19}\left(1+2+\cdots+18\right)-\left(\left\lbrace \frac{x}{19} \right\rbrace+\left\lbrace \frac{2x}{19} \right\rbrace+\cdots+\left\lbrace \frac{18x}{19} \right\rbrace\right)\\
+                &=9x-\left(\left\lbrace \frac{x}{19} \right\rbrace+\left\lbrace \frac{2x}{19} \right\rbrace+\cdots+\left\lbrace \frac{18x}{19} \right\rbrace\right).
+                \end{split}
+                \]
+                </p>
+                <p>De lo anterior, si \(x\) es un entero divisible por \(19\), \(S(x)=9x\). Por otro lado, es fácil ver que, para \(x\) entero y \(n\in\left\lbrace 1,2,\ldots,18 \right\rbrace\),
+                \[
+                \left\lbrace \frac{nx}{19} \right\rbrace=\frac{r}{19},
+                \]
+                </p>
+                <p>en donde \(r\) es un entero con \(0\leq r\lt19\) tal que \(nx\equiv r\pmod{19}\). De este modo, al ser \(19\) primo, si \(x\) no es divisible por \(19\), \(x\) y \(19\) son primos relativos, por lo que para cada entero \(r\) tal que \(0\lt r\lt19\), existe un único entero \(n\in\left\lbrace 1,2,\ldots,18 \right\rbrace\) que satisface \(nx\equiv r\pmod{19}\). Por consiguiente, si \(x\) no es divisible por \(19\),
+                \[
+                \begin{split}
+                \left\lbrace \frac{x}{19} \right\rbrace+\left\lbrace \frac{2x}{19} \right\rbrace+\cdots+\left\lbrace \frac{18x}{19} \right\rbrace&=\frac{1}{19}+\frac{2}{19}+\cdots+\frac{18}{19}\\
+                &=\frac{18(19)}{2(19)}\\
+                &=9,
+                \end{split}
+                \]
+                </p>
+                <p>de donde \(S(x)=9x-9\). Por lo tanto, en cualquier caso, si \(x\) es entero, \(9\) divide a \(S(x)\).</p>
+                <p><strong>2.</strong> Observemos que \(S(0)=0\). Ahora, conforme \(x\) crece en los reales del \(0\) al \(19\), el valor de \(S(x)\) cambia cada vez que algún número de la forma \(\frac{qx}{19}\) se vuelve igual a un entero \(p\), con \(q\in\left\lbrace 1,2,\ldots,18 \right\rbrace\) y \(0\lt p\leq 18\), en donde esta última desigualdad se obtiene considerando que \(0\lt x\leq 19\) y \(0\lt q\leq 18\), de modo que
+                    \[
+                    0\lt \frac{qx}{19}\leq \frac{18(19)}{19}=18.
+                    \]
+                </p>
+                <p>Así que, si \(\frac{qx}{19}\) es igual a un entero \(p\), este debe cumplir que \(0\lt p\leq 18\). Adicionalmente, \(\frac{qx}{19}=p\) si y solo si \(\frac{x}{19}=\frac{p}{q}\). Por consiguiente, buscaremos el número de fracciones distintas de la forma \(\frac{p}{q}\), con \(p>0\) y \(\frac{p}{q}\leq 1\). Para cada \(n\in\left\lbrace 1,2,\ldots,18 \right\rbrace\), hay \(\phi(n)\) fracciones de la forma \(\frac{a}{n}\), menores o iguales a \(1\), con \((a, n)=1\), por lo que existen
+                    \[
+                    \sum_{n=1}^{18} \phi(n)
+                    \]
+                </p>
+                <p>fracciones distintas de la forma \(\frac{p}{q}\), con \(p>0\) y \(\frac{p}{q}\leq 1\). Así pues, considerando que \(S(0)=0\), la cantidad de valores posibles que puede tomar \(S(x)\) para \(0\leq x\leq 19\) es
+                    \[
+                    \begin{split}
+                    1+\sum_{n=1}^{18} \phi(n)=&1+1+1+2+2+4+2+6+4+6+4+10+4+\\
+                    &+12+6+8+8+16+6\\
+                    =&103.
+                    \end{split}
+                    \]
+                </p>
+            </div>
+    </div>
+    <div class="probsol">
+        <p><strong>Problema 2.</strong> Sea \(\triangle ABC\) un triángulo rectángulo de hipotenusa \(AB\), con \(AB=c\), \(BC=a\) y \(CA=b\). Sean \(M\), \(N\) puntos en \(AB\); \(P\), \(Q\) puntos en \(BC\) y \(R\), \(S\) puntos en \(CA\) tales que \(NP\) es paralela a \(CA\), \(QR\) es paralela a \(AB\), \(SM\) es paralela a \(BC\), y \(NP\), \(QR\) y \(SM\) son tangentes a la circunferencia inscrita en \(\triangle ABC\). (Los seis nuevos puntos son distintos a los primeros puntos \(A\), \(B\), \(C\)).</p>
+        <p>Expresa la suma \(NP+QR+SM\) en términos de \(a\), \(b\) y \(c\).</p>
+        <button onclick="myFunction('botonsolucion2', 'sol2')" id="botonsolucion2" class="button b1">Mostrar Solución</button>
+            <div class="sol" id="sol2">
+                <p>Sean \(A'\), \(B'\), \(C'\), \(D\), \(E\) y \(F\) los puntos de tangencia del incírculo de \(\triangle ABC\) con \(SM\), \(NP\), \(QR\), \(BC\), \(CA\) y \(AB\), respectivamente. Además, llamemos \(I\) al incentro de \(\triangle ABC\) y \(r\) al inradio.</p>
+                <p>Al ser \(SM\) tangente al incírculo de \(\triangle ABC\) en \(A'\), \(IA'\) es perpendicular a \(SM\). Análogamente \(DI\) es perpendicular a \(BC\). Puesto que \(SM\) es paralela a \(BC\), los puntos \(I\), \(D\) y \(A'\) son colineales y \(DA'\) es paralela a \(CA\). De manera análoga, \(I\), \(E\) y \(B'\) son colineales, así como \(I\), \(F\) y \(C'\), y \(EB'\) es paralela a \(BC\).</p>
+                <p>Por otra parte, veamos que \(CDIE\) es un cuadrado, de donde se sigue que \(r=CD=CE\). Así pues, \(BD=a-r\) y \(AE=b-r\). Además, por ser \(AE\) y \(AF\) tangentes al incírculo de \(\triangle ABC\), \(AF=AE=b-r\). Análogamente, \(BF=BD=a-r\). Luego,
+                \[
+                c=AB=AF+BF=a-r+b-r=a+b-2r,
+                \]
+                </p>
+                <p>por lo que \(r=\frac{a+b-c}{2}\). Así pues,
+                \[
+                AS=AC-SC=b-A'D=b-2r=b-(a+b-c)=c-a
+                \]
+                </p>
+                <p>y
+                \[
+                BP=BC-PC=a-B'E=a-2r=a-(a+b-c)=c-b.
+                \]
+                </p>
+                <p>Ahora bien, los triángulos \(\triangle ASM\) y \(\triangle ACB\) son semejantes, puesto que \(SM\) es paralela a \(BC\). Por consiguiente, \index{Tri\'angulos semejantes}
+                \[
+                \frac{SM}{c-a}=\frac{SM}{AS}=\frac{CB}{AC}=\frac{a}{b},
+                \]
+                </p>
+                <p>y así,
+                \[
+                SM=\frac{a(c-a)}{b}.
+                \]
+                </p>
+                <p>De manera análoga, \(\triangle BPN\) y \(\triangle BCA\) son semejantes, puesto que \(PN\) es paralela a \(AC\). Luego,
+                \[
+                \frac{PN}{c-b}=\frac{PN}{BP}=\frac{CA}{BC}=\frac{b}{a},
+                \]
+                </p>
+                <p>y así,
+                \[
+                PN=\frac{b(c-b)}{a}.
+                \]
+                </p>
+                <p>Por otro lado, los triángulos \(\triangle ABC\) y \(\triangle RQC\) son semejantes, y la altura sobre la hipotenusa de \(\triangle ABC\) es igual a \(\frac{ab}{c}\), mientras que la de \(\triangle RQC\) es \(\frac{ab}{c}-2r=\frac{ab}{c}-(a+b-c)\). Luego, la razón de semejanza entre estos triángulos es igual a la razón entre las alturas, por lo que
+                \[
+                \frac{\frac{ab}{c}}{\frac{ab}{c}-(a+b-c)}=\frac{AB}{RQ}=\frac{c}{RQ},
+                \]
+                </p>
+                <p>y así,
+                \[
+                RQ=\frac{ab-c(a+b-c)}{\frac{ab}{c}}=\frac{c(ab-ac-bc+c^2)}{ab}=\frac{c(c-a)(c-b)}{ab}.
+                \]
+                </p>
+                <p>Finalmente,
+                \[
+                \begin{split}
+                NP+QR+SM&=\frac{b(c-b)}{a}+\frac{c(c-a)(c-b)}{ab}+\frac{a(c-a)}{b}\\
+                &=\frac{a^2(c-a)+b^2(c-b)+c(c-a)(c-b)}{ab}.
+                \end{split}
+                \]
+                </p>
+                <img src="imag-sol.png" alt="Figura de solución" width="80%" style="display: block; margin: 0 auto;">
+            </div>
+    </div>
+    <div class="probsol">
+        <p><strong>Problema 3.</strong> Sea \(A\) el conjunto de los vértices de un \(n\)-ágono regular de \(1999\) lados y 
+            consideremos todos los triángulos que se pueden formar cuyos vértices están en \(A\). ¿Cuántos tipos de triángulos diferentes
+            (no congruentes) pueden encontrarse?</p>
+        <button onclick="myFunction('botonsolucion3', 'sol3')" id="botonsolucion3" class="button b1">Mostrar Solución</button>
+            <div class="sol" id="sol3">
+                <p> <strong>Solución. </strong>Puesto que el polígono es un \(n\)-ágono regular, se puede inscribir en una circunferencia. De aquí es fácil ver que dos triángulos con vértices en \(A\) son congruentes si y solo si tienen todos sus ángulos iguales.</p>
+                <p> Ahora bien, consideremos un triángulo con vértices en \(A\) y ángulos de magnitudes \(a\), \(b\) y \(c\) (medidos en grados). Al ser ángulos inscritos en la circunferencia circunscrita al \(n\)-ágono regular de \(1999\) lados, cada uno de ellos es de la forma \(\frac{n}{1999}\cdot 180^{\circ}\), con \(n\) un entero positivo; y cumplen además que \(a+b+c=180^{\circ}\).</p>
+                <p> Así pues, si \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), entonces \(m+n+p=1999\). De esta manera, a cada triángulo con vértices en \(A\) se le puede asignar una terna no ordenada \((m, n, p)\) de enteros positivos cuya suma es \(1999\).</p>                   
+                <p> Recíprocamente, si \((m, n, p)\) es una terna no ordenada de enteros positivos cuya suma es \(1999\), definiendo \(a=\frac{m}{1999}\cdot 180^{\circ}\), \(b=\frac{n}{1999}\cdot 180^{\circ}\) y \(c=\frac{p}{1999}\cdot 180^{\circ}\), se tiene que \(a+b+c=180^{\circ}\), por lo que se puede encontrar un triángulo con vértices en \(A\) con ángulos de magnitudes \(a\), \(b\) y \(c\).</p>
+                <p> Por lo tanto, el problema es equivalente a contar cuántas ternas no ordenadas de enteros positivos \((m, n, p)\) existen tales que \(m+n+p=1999\). Evidentemente no existe ninguna terna de enteros positivos todos iguales cuya suma es \(1999\).</p>
+                <p> Contaremos primero las ternas \((m, n, p)\) con dos números iguales, digamos \(m=n\). De este modo, \(p\) debe cumplir que \(p=1999-2m\). Puesto que \(p\) debe ser un entero positivo, entonces \(m=n\leq 999\). Luego, existen \(999\) ternas no ordenadas con dos números iguales que cumplen las condiciones planteadas.</p>                   
+                <p> Contemos ahora las ternas no ordenadas que tienen todos sus números distintos. Para ello, contaremos todas las ternas ordenadas de enteros positivos \((m, n, p)\) cuya suma sea \(1999\). Definamos \(m'=m-1\), \(n'=n-1\) y \(p'=p-1\). Luego, \(m',n',p'\geq 0\), y \(m'+n'+p'=1996\). Por consiguiente, podemos interpretar este conteo como el número de formas en que se pueden dividir \(1996\) objetos en \(3\) espacios. Usando el método de separadores, hay que acomodar \(2\) separadores en \(1998\) espacios, lo cual se puede hacer de \(\binom{1998}{2}=\frac{1998(1997)}{2}=1995003\) formas.</p>
+                <p> En el conteo anterior, cada terna no ordenada con dos números iguales se está considerando \(3\) veces, por lo que existen \(1995003-3(999)=1992006\) ternas ordenadas con todos sus elementos distintos. Puesto que los números de cada una de estas ternas se pueden ordenar de \(3!=6\) formas, hay \(\frac{1992006}{6}=332001\) ternas no ordenadas con todos sus elementos distintos cuya suma es \(1999\).</p>
                 <p> Por lo tanto, hay \(999+332001=333000\) ternas que cumplen con lo pedido, por lo que existen \(333000\) tipos de triángulos diferentes (no congruentes) que satisfacen las condiciones del problema.</p>
             </div>
     </div>
+    <div class="probsol">
+        <p><strong>Problema 4.</strong></p>
+        <ol>
+            <li>Prueba que para todo entero positivo \(n\) existen tres enteros \(a\), \(b\), \(c\) tales que
+                \[
+                n=a^2+b^2-c^2.
+                \]</li>
+            <li>Prueba que a lo más para \(1699\) enteros positivos \(n\lt 1999\) existen enteros \(a\), \(b\), \(c\) tales que
+                \[
+                n=a^2+b^2+c^2.
+                \]</li>
+        </ol>
+        <button onclick="myFunction('botonsolucion4', 'sol4')" id="botonsolucion4" class="button b1">Mostrar Solución</button>
+            <div class="sol" id="sol4">
+                <p><strong>Solución.</strong></p>
+                <p>1. Sea \(n\) un entero positivo arbitrario. Por el algoritmo de la división existen enteros \(k\), \(r\), con \(0\leq r\lt 4\), tales que \(n=4k+r\). Analizaremos los diferentes casos que se pueden producir.</p>
+                <ul>
+                    <li>Si \(n=4k\), entonces \(n=0^2+(k+1)^2-(k-1)^2\).</li>
+                    <li>Si \(n=4k+1\), entonces \(n=1^2+(k+1)^2-(k-1)^2\).</li>
+                    <li>Si \(n=4k+2\), entonces \(n=1^2+(2k+1)^2-(2k)^2\).</li>
+                    <li>Si \(n=4k+3\), entonces \(n=0^2+(2k+2)^2-(2k+1)^2\).</li>
+                </ul>
+                <p>Por lo tanto, para todo entero positivo \(n\) existen tres enteros \(a\), \(b\), \(c\) tales que \(n=a^2+b^2-c^2\).</p>
+                <p>Sea \(n=4^r(8k+7)\) un entero positivo, con \(k\), \(r\) enteros no negativos. Supongamos que existen enteros no negativos \(a\), \(b\), \(c\) tales que \(n=a^2+b^2+c^2\).</p>
+                <p>Si \(r=0\), entonces \(n=8k+7\). Analizando módulo \(8\) se llega a que
+                \[
+                a^2+b^2+c^2\equiv 7\pmod{8}.\,\,\,\,\,\,\, (1)
+                \]
+                </p>
+                <p>Como \(m^2\equiv 1\pmod{8}\) si \(m\) es impar, alguno de \(a\), \(b\) o \(c\) debe ser par. Sin pérdida de generalidad, supongamos que \(a\) es par. De este modo, \(a^2\) es congruente con \(0\) o \(4\) módulo \(8\). Sin embargo, los únicos residuos cuadráticos módulo \(8\) son \(0, 1, 4\), por lo que la suma de dos cuadrados solo puede ser congruente módulo \(8\) a \(0\), \(1\), \(2\), \(4\) o \(5\), lo cual contradice (1).</p>
+                <p>Por otro lado, si \(r>0\), se tiene que \(a^2+b^2+c^2\) es congruente con \(0\) módulo \(4\). Puesto que los únicos residuos cuadráticos módulo \(4\) son \(0\) y \(1\), esto implica que
+                \[
+                a^2\equiv b^2\equiv c^2\equiv 0 \pmod{4},
+                \]
+                </p>
+                <p>de lo que se sigue que \(a\), \(b\) y \(c\) son pares. Por consiguiente, se tiene que
+                \[
+                4^{r-1}(8k+7)={\left(\frac{a}{2}\right)}^2+{\left(\frac{b}{2}\right)}^2+{\left(\frac{c}{2}\right)}^2,
+                \]
+                </p>
+                <p>con \(\frac{a}{2}\), \(\frac{b}{2}\) y \(\frac{c}{2}\) enteros no negativos. Continuando de manera análoga, se llega a que existen enteros no negativos \(a_1\), \(b_1\) y \(c_1\) que satisfacen
+                \[
+                8k+7={a_1}^2+{b_1}^2+{c_1}^2,
+                \]
+                </p>
+                <p>lo cual ya vimos que no es posible.</p>
+                <p>En conclusión, si \(n\) es de la forma \(n=4^r(8k+7)\), con \(k\), \(r\) enteros no negativos, entonces \(n\) no puede ser escrito como suma de tres cuadrados. Ya que \(8(248)+7=1991\lt 1999\), existen \(249\) enteros positivos de la forma \(8k+7\) menores a \(1999\). Por otro lado, puesto que \(4(8(61)+7)=4(495)=1980\lt 1999\), existen \(62\) enteros positivos de la forma \(4(8k+7)\) menores a \(1999\).</p>
+                <p>Así pues, existen al menos \(249+62=311\) enteros positivos menores a \(1999\) que no se pueden escribir como suma de tres cuadrados, por lo que a lo más \(1998-311=1687\lt 1699\) pueden ser escritos como suma de tres cuadrados.</p>
+            </div>
+    </div>
+    
 <div id="Comentarios" style="margin-top: 10%">
     <h2 style= text-align:center>Comentarios</h2>
     <textarea id="input" rows="5" placeholder="Escribe tu comentario aquí..."></textarea>
