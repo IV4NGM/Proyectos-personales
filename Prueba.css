@@ -54,6 +54,19 @@ textarea{
     font-size: large;
 }
 
+#inputautor{
+    border-style: solid;
+    width: 20%;
+    border-width: 2px;
+    background-color: white;
+    padding: 1%;
+    margin: 1%;
+    border-color: rgb(104, 104, 104);
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large; 
+}
+
 .button{
     transition-duration: 0.4s;
     border: none;

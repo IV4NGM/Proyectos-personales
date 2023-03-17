@@ -24,8 +24,12 @@ function addElement() {
   newDiv.classList.add('comentarios')
 
   // and give it some content
-  const newContent = document.createTextNode(document.getElementById('input').value);
-
+  var myInput=document.getElementById('inputautor')
+  if(myInput && myInput.value){
+  var newContent = document.createTextNode('Autor: '+document.getElementById('inputautor').value+'\n'+new Date().toLocaleString()+'\n\n'+document.getElementById('input').value);
+  }else{
+  var newContent = document.createTextNode('Autor: Desconocido\n'+new Date().toLocaleString()+'\n\n'+document.getElementById('input').value);  
+  }
   // add the text node to the newly created div
   newDiv.appendChild(newContent);
 
@@ -33,6 +37,7 @@ function addElement() {
   const currentDiv = document.getElementById("Comentarios");
   currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
   document.getElementById('input').value=''
+  document.getElementById('inputautor').value=''
 }
 
 let inputcolor
