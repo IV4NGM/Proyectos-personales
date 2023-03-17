@@ -20,7 +20,18 @@ body{
   display: none;
 }
 
-
+textarea{
+    border-style: solid;
+    width: 96%;
+    border-width: 2px;
+    background-color: white;
+    padding: 1%;
+    margin: 1%;
+    border-color: rgb(104, 104, 104);
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
 
 .button{
     transition-duration: 0.4s;
@@ -50,6 +61,17 @@ body{
 
 .b2:hover{
     background-color: rgb(0, 175, 0);
+}
+
+.comentarios{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(104, 104, 104);
+    background-color: rgb(254, 254, 246);
+    padding: 1%;
+    margin: 1%;
+    display: block;
+    white-space: pre;
 }
 
 footer{
