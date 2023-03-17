@@ -35,3 +35,18 @@ function addElement() {
   document.getElementById('input').value=''
 }
 
+let inputcolor
+window.addEventListener("load", startup, false);
+function startup() {
+  inputcolor = document.getElementById("inputcolor")
+  inputcolor.addEventListener("input", changeColor, false);
+}
+
+
+function changeColor() {
+  document.body.style.backgroundColor=document.getElementById('inputcolor').value;
+}
+function resetColor() {
+  document.body.style.backgroundColor='rgb(254, 254, 193)';
+  document.getElementById("inputcolor").value='#FEFEC1';
+}

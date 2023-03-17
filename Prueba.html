@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="stylesheet" href="Prueba.css" type="text/css">
     <meta charset="UTF-8">
@@ -176,7 +176,7 @@
                     <li>Si \(n=4k+3\), entonces \(n=0^2+(2k+2)^2-(2k+1)^2\).</li>
                 </ul>
                 <p>Por lo tanto, para todo entero positivo \(n\) existen tres enteros \(a\), \(b\), \(c\) tales que \(n=a^2+b^2-c^2\).</p>
-                <p>Sea \(n=4^r(8k+7)\) un entero positivo, con \(k\), \(r\) enteros no negativos. Supongamos que existen enteros no negativos \(a\), \(b\), \(c\) tales que \(n=a^2+b^2+c^2\).</p>
+                <p>2. Sea \(n=4^r(8k+7)\) un entero positivo, con \(k\), \(r\) enteros no negativos. Supongamos que existen enteros no negativos \(a\), \(b\), \(c\) tales que \(n=a^2+b^2+c^2\).</p>
                 <p>Si \(r=0\), entonces \(n=8k+7\). Analizando módulo \(8\) se llega a que
                 \[
                 a^2+b^2+c^2\equiv 7\pmod{8}.\,\,\,\,\,\,\, (1)
@@ -210,7 +210,12 @@
     <button id="ComentariosButton" onclick="addElement()" class="button b1">Añadir comentario</button>
 </div>
 <footer>
-    Iván G M
+    <div>
+        <label for="inputcolor">Color de la página:</label>
+        <input type="color" id="inputcolor" value="#FEFEC1">
+        <button onclick="resetColor()" class="button b2">Reestablecer color</button>
+    </div>
+    <p>Iván G M</p> 
 </footer>
 </body>
 </html>
