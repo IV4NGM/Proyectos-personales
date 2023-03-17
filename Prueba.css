@@ -1,9 +1,28 @@
+header{
+    background-image: url(https://c1.wallpaperflare.com/preview/73/625/200/math-blackboard-education-classroom.jpg);
+    background-color: rgb(193, 255, 79);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    height: 200px;
+    display: flex;
+    color: rgb(0, 0, 126);
+    font-weight: bold;
+}
+
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+}
+
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     background-color: rgb(254, 254, 193);
-    margin-left: 10%;
-    margin-right: 10%;
     overflow-y: scroll;
 }
 
@@ -52,7 +71,7 @@ textarea{
     background-color: beige;
     transition-duration: 0.4s;
     border: solid;
-    border-width: 2px;
+    border-width: 1px;
     color: black;
     padding: 0.5% 1%;
     text-decoration: none;
@@ -60,6 +79,8 @@ textarea{
     position: absolute;
     display: inline;
     right: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
 }
 
 .b1{
@@ -85,11 +106,27 @@ textarea{
     border-color: rgb(104, 104, 104);
     background-color: rgb(254, 254, 246);
     padding: 1%;
-    margin: 1%;
+    margin: 2%;
     display: block;
     white-space: pre;
 }
 
 footer{
     padding: 1%;
+    margin-top: 5%;
+    background-color: rgb(239, 148, 87);
+    border: solid;
+    border-color: rgb(163, 87, 36);
+    border-top-width: 1px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    height: fit-content;
 }

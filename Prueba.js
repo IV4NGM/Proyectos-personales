@@ -31,7 +31,7 @@ function addElement() {
 
   // add the newly created element and its content into the DOM
   const currentDiv = document.getElementById("Comentarios");
-  document.body.insertBefore(newDiv, currentDiv.nextSibling);
+  currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
   document.getElementById('input').value=''
 }
 
