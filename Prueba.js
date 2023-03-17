@@ -18,6 +18,7 @@ function myFunction(botonid, solid) {
 
 
 function addElement() {
+  if(document.getElementById('input') && document.getElementById('input').value){
   // create a new div element
   const newDiv = document.createElement("div");
 
@@ -38,6 +39,9 @@ function addElement() {
   currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
   document.getElementById('input').value=''
   document.getElementById('inputautor').value=''
+  }else{
+    alert('Escribe un comentario antes de enviar.')
+  }
 }
 
 let inputcolor
