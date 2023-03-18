@@ -44,6 +44,39 @@ function addElement() {
   }
 }
 
+//Función para añadir comentarios pero con LaTex
+
+function addElement2() {
+  if(document.getElementById('input') && document.getElementById('input').value){
+  // create a new div element
+  const newDiv = document.createElement("div");
+
+  newDiv.classList.add('comentarios')
+
+  // and give it some content
+  var myInput=document.getElementById('inputautor')
+  var insertado=document.getElementById('input').value
+  var regex = /\$(.*?)\$/g;
+  insertado=insertado.replace(regex, "\\($1\\)");
+  if(myInput && myInput.value){
+  var newContent = document.createTextNode('Autor: '+document.getElementById('inputautor').value+'\n'+new Date().toLocaleString()+'\n\n'+insertado);
+  }else{
+  var newContent = document.createTextNode('Autor: Desconocido\n'+new Date().toLocaleString()+'\n\n'+insertado);  
+  }
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("Comentarios");
+  currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
+  document.getElementById('input').value=''
+  document.getElementById('inputautor').value=''
+  MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'comentarios']);
+  }else{
+    alert('Escribe un comentario antes de enviar.')
+  }
+}
+
 let inputcolor
 window.addEventListener("load", startup, false);
 function startup() {
