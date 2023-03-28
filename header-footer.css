@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    background-color: beige;
+}
+
+
+.cuerpo{
+    display: block;
+    height: 5500px;
+}
+
+footer{
+    position: absolute;
+    background-color: aqua;
+    left: 0;
+    right: 0;
+}
