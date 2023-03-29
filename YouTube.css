@@ -1,10 +1,16 @@
 *{
     margin: 0;
+    margin-right: 2px;
 }
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    margin-left: 9px;
+    margin-right: 20px;
+    background-color: white;
 }
 .material-symbols-outlined{
     font-variation-settings:
@@ -21,62 +27,92 @@ body{
     cursor: pointer;
 }
 
-.container{
-    display: grid;
-    grid-template-areas: 
-    "nav nav"
-    "article other"
-    "article main"
-    ;
-    grid-template-columns: 15% 85%;
-    margin-left: 12px;
-    margin-right: 20px;
-}
 nav{
-    grid-area: nav;
-}
-
-article{
-    grid-area: article;
-}
-
-.lateral{
-    margin-left: 12px;
-    margin-right: 15px;
-    background-color: white;
     display: flex;
-    flex-direction: column;
-}
-/*
-.lateral:active::-webkit-scrollbar-thumb,
-.lateral:focus::-webkit-scrollbar-thumb,
-.lateral:hover::-webkit-scrollbar-thumb {
-    visibility: visible;
-}
-.lateral::-webkit-scrollbar-thumb {
-    background-color: rgb(139, 137, 137);
-    border-radius: 10px;
-    visibility: hidden;
-}
-
-.lateral::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-    margin: 15px;
-}
-*/
-
-.other{
-    grid-area: other;
-}
-main{
-    grid-area: main;
+    position: fixed;
+    height: 65px;
+    background-color: white;
+    width: 100%;
 }
 
 .navc{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin-right: 40px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    margin-top: 65px;
+    width: 100%;
+    background-color: white;
+}
+
+article{
+    display: flex;
+    width: 13.5%;
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    flex-direction: column;
+    padding-left: 12px;
+    padding-right: 15px;
+    background-color: white;
+    margin-right: 0;
+}
+
+
+article:active::-webkit-scrollbar-thumb,
+article:focus::-webkit-scrollbar-thumb,
+article:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+article::-webkit-scrollbar-thumb {
+    background-color: rgb(144, 144, 144);
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+article::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    margin: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(96, 96, 96);
+    border-radius: 10px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 18%;
+    background-color: white;
+}
+
+.musica{
+    display: flex;
+    position: fixed;
+    height: 50px;
+    width: 80%;
+    background-color: white;
+    justify-content: space-between;
+}
+main{
+    background-color: white;
+    display: flex;
+    margin-top: 50px;
+    height: 1000px;
 }
 
 .navcp{
@@ -106,7 +142,7 @@ main{
     padding: 5px;
     border-radius: 40px 0px 0px 40px;
     border: 1px solid #ccc;
-    height: 30px;
+    height: 31px;
     align-items: center;
     justify-content: center;
     box-shadow: inset 0 1px 2px #eee
@@ -161,6 +197,7 @@ input:focus{
     display: flex;
     padding: 8px;
     width: 200px;
+    height: 40px;
     background-color: white;
     border: 0;
     border-radius: 5px;
@@ -217,12 +254,9 @@ input:focus{
 .vidc{
     display: flex;
     width: 375px;
-    margin: 10px;
+    margin: 5px;
     flex-direction: column;
 }
-
-
-
 .vids{
     width: 350px;
     height: 200px;
