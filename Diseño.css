@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    background-color: lightgreen;
+    height: 50px;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container{
+    display: flex;
+    /*position: fixed;*/
+    margin-top: 50px;
+    width: 100%;
+}
+
+article{
+    display: flex;
+    background-color: rgb(148, 127, 255);
+    width: 20%;
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    flex-direction: column;
+}
+
+.right{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin-left: 20%;
+    background-color: rebeccapurple;
+}
+
+.musica{
+    display: flex;
+    position: fixed;
+    background-color: aqua;
+    height: 50px;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    background-color: beige;
+    margin-top: 50px;
+    height: 1000px;
+}
