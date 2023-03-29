@@ -70,9 +70,7 @@ article{
     grid-area: other;
 }
 main{
-    background-color: aqua;
     grid-area: main;
-    height: 1400px;
 }
 
 .navc{
@@ -179,17 +177,50 @@ input:focus{
 
 .navm{
     display: flex;
-
+    justify-content: space-between;
+    margin-left: 25px;
 }
 
 .barriba{
     display: flex;
     padding: 8px;
-    width: 50px;
+    min-width: 60px;
+    height: 35px;
     background-color: #eee;
     border: 0;
     border-radius: 5px;
+    justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+}
+
+.barriba:hover{
+    background-color: #dbdbdb;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.mainm{
+    display: flex;
+    margin-left: 25px;
+    margin-top: 25px;
+    background-color: white;
+    flex-direction: column;
+}
+
+.barravid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.vids{
+    width: 350px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.titulosdiv{
+    width: 350px;
+    margin: 20px;  
 }
