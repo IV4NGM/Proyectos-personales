@@ -12,47 +12,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!--Para símbolo tres barras Menu-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48
-        }
-    </style>
-    <script src="YouTube.js"></script>
 </head>
 <body>
     <div class="container">
         <nav>
             <div class="navc">
-                <div class="navcl">
+                <div class="navcp">
                     <div class="menu">
                         <span class="material-symbols-outlined">
                             menu
                         </span>
                     </div>
-                    <img class="logo" src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-9.png" alt="Logo YouTube">
+                    <img class="logo" src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-9.png" alt="Logo YouTube" title="Página de inicio de YouTube">
                 </div>
-                <div class="navcc">
+                <div class="navcp">
                     <div class="barra">
                         <input type="text" placeholder="Buscar" id="search">
                     </div>
                     <div>
-                        <button class="lupa" onclick="buscar()" title="Buscar"><span class="material-symbols-outlined">
+                        <button class="lupa" onclick="buscar()" title="Buscar" id="search_button"><span class="material-symbols-outlined">
                             search
-                        </span></button>
+                        </span>
+                        </button>
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <span class="material-symbols-outlined" title="Haz búsquedas por voz">
+                            mic
+                        </span>
                     </div>
                 </div>
-                <div class="navcr">
-                    Cuenta
+                <div class="navcp">
+                    <div style="margin-left: 15px;">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0" title="Crear">
+                            video_call
+                        </span>
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0" title="Notificaciones">
+                            notifications
+                            </span>
+                    </div>
+                    <div style="margin-left: 15px;">
+                        <img src="playa.jpg" alt="Perfil" class="perfil">
+                    </div>
                 </div>
             </div>
         </nav>
-        <article>Izquierdo</article>
-        <nav class="other">Tipos de música</nav>
+        <article>
+            <div class="lateral">
+                <div style="border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                    <button class="blateral" style="background-color: #eee;" title="Inicio"><span class="material-symbols-outlined" style="margin-right: 15px;">
+                        home
+                        </span>Inicio</button>
+                    <button class="blateral" title="Shorts"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                        theaters
+                        </span>Shorts</button>
+                    <button class="blateral" title="Suscripciones"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                        subscriptions
+                        </span>Suscripciones</button>
+                </div>
+                <div style="border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                    <button class="blateral" title="Mi biblioteca"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                        video_library
+                        </span>Mi biblioteca</button>
+                    <button class="blateral" title="Historial"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                        history
+                        </span>Historial</button>
+                    <button class="blateral" title="Mis videos"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                        smart_display
+                        </span>Mis videos</button>
+                    <button class="blateral" title="Ver más tarde"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                            schedule
+                        </span>Ver más tarde</button>
+                    <button class="blateral" title="Likes"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                            thumb_up
+                        </span>Likes</button>
+                    <button class="blateral" title="Mostrar más"><span class="material-symbols-outlined" style="margin-right: 15px; font-variation-settings: 'FILL' 0">
+                            expand_more
+                    </span>Mostrar más</button>
+                </div>
+                <div>
+                    <p style="font-size: 16px; margin-top: 15px; margin-bottom: 10px;">Suscripciones</p>
+                    <button class="blateral" title="Ciencia atómica"><img class="perfil" src="https://raw.githubusercontent.com/mallowigi/a-file-icon-idea/master/icon.png" alt="Ciencia atómica" style="margin-right: 15px;">Ciencia atómica</button>
+                    <button class="blateral" title="Easy fixing"><img class="perfil" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-tools.svg/1200px-Circle-icons-tools.svg.png" alt="Easy fixing" style="margin-right: 15px;">Easy fixing</button>
+                    <button class="blateral" title="Web design"><img class="perfil" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1200px-Circle-icons-computer.svg.png" alt="Web design" style="margin-right: 15px;">Web design</button>
+                </div>
+            </div>
+        </article>
+        <nav class="other">
+            <div class="navm">
+                <button class="barriba">Todo</button>
+            </div>
+        </nav>
         <main>Videos</main>
     </div>
+    <script src="YouTube.js"></script>
 </body>
 </html>

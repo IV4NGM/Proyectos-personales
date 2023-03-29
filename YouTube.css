@@ -4,6 +4,21 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    overflow-y: scroll;
+}
+.material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    padding: 5px;
+}
+
+.material-symbols-outlined:hover{
+    background-color: #eee;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .container{
@@ -15,21 +30,49 @@ body{
     ;
     grid-template-columns: 15% 85%;
     margin-left: 12px;
+    margin-right: 20px;
 }
 nav{
     grid-area: nav;
 }
+
 article{
-    background-color: blue;
     grid-area: article;
 }
+
+.lateral{
+    margin-left: 12px;
+    margin-right: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+/*
+.lateral:active::-webkit-scrollbar-thumb,
+.lateral:focus::-webkit-scrollbar-thumb,
+.lateral:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+.lateral::-webkit-scrollbar-thumb {
+    background-color: rgb(139, 137, 137);
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.lateral::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    margin: 15px;
+}
+*/
+
 .other{
-    background-color: green;
     grid-area: other;
 }
 main{
     background-color: aqua;
     grid-area: main;
+    height: 1400px;
 }
 
 .navc{
@@ -38,13 +81,7 @@ main{
     margin: 10px;
 }
 
-.navcl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navcc{
+.navcp{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,13 +98,17 @@ main{
     margin-left: 22px;
 }
 
+.logo:hover{
+    cursor: pointer;
+}
+
 .barra{
     display: flex;
     width: 500px;
     padding: 5px;
     border-radius: 40px 0px 0px 40px;
     border: 1px solid #ccc;
-    height: 25px;
+    height: 30px;
     align-items: center;
     justify-content: center;
     box-shadow: inset 0 1px 2px #eee
@@ -77,7 +118,7 @@ main{
     border-radius: 0px 40px 40px 0px;
     border: 1px solid #ccc;
     width: 40px;
-    height: 37px;
+    height: 42px;
     border-left: 0;
     background-color: #f8f8f8;
     display: flex;
@@ -106,4 +147,49 @@ input:focus{
 .barra:focus-within{
     border-color: #065fd4;
     box-shadow: 0px 0px 2px inset;
+}
+
+.perfil{
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.perfil:hover{
+    cursor: pointer;
+}
+
+.blateral{
+    display: flex;
+    padding: 8px;
+    width: 200px;
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.blateral:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.navm{
+    display: flex;
+
+}
+
+.barriba{
+    display: flex;
+    padding: 8px;
+    width: 50px;
+    background-color: #eee;
+    border: 0;
+    border-radius: 5px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
