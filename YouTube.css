@@ -206,7 +206,7 @@ input:focus{
     margin-left: 25px;
     margin-top: 25px;
     background-color: white;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .barravid{
@@ -214,13 +214,42 @@ input:focus{
     justify-content: space-between;
 }
 
-.vids{
-    width: 350px;
-    margin: 20px;
-    border-radius: 20px;
+.vidc{
+    display: flex;
+    width: 375px;
+    margin: 10px;
+    flex-direction: column;
 }
 
-.titulosdiv{
+
+
+.vids{
     width: 350px;
-    margin: 20px;  
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.vids:hover{
+    cursor: pointer;
+}
+
+.vidtitulos{
+    display: flex;
+    width: 350px;
+    margin: 20px;
+}
+
+.perfilvid{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.perfilvid:hover{
+    cursor: pointer;
+}
+
+.viddescrip:hover{
+    cursor: pointer;
 }
