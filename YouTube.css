@@ -83,7 +83,8 @@ article::-webkit-scrollbar {
 .articlec{
     border-bottom: 1px solid #eee;
     padding-bottom: 8px;
-    margin-top: 8px; margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .articletitle{
@@ -101,6 +102,10 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar {
     width: 16px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(144, 144, 144);
 }
 
 
@@ -205,6 +210,16 @@ input:focus{
 .perfil:hover{
     cursor: pointer;
 }
+
+.perfil2{
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.perfil2:hover{
+    cursor: pointer;
+}
+
 
 .blateral{
     display: flex;
