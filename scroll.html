@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barra deslizable con jQuery</title>
+  <style>
+    #botonera-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 300px;
+      border: 1px solid black;
+      height: 150px;
+    }
+    #botonera {
+      position: absolute;
+      white-space: nowrap;
+      width: fit-content;
+      left: 0;
+      transition: left 0.5s ease;
+    }
+    #botonera button {
+      display: inline-block;
+      vertical-align: top;
+      width: 80px;
+      height: 80px;
+      margin: 5px;
+      background-color: gray;
+      color: white;
+      font-size: 24px;
+      border: none;
+    }
+    #botonera button:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+    .btn-mover {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      margin: 5px;
+      border: none;
+      background-color: gray;
+      color: white;
+      cursor: pointer;
+    }
+    #mover-izquierda {
+      left: 0;
+    }
+    #mover-derecha {
+      right: 0;
+    }
+    #botonera-wrapper::before, #botonera-wrapper::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+    z-index: 1;
+    }
+
+    #botonera-wrapper::before {
+    left: 0;
+    }
+
+    #botonera-wrapper::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+    }
+  </style>
+</head>
+<body>
+  <div id="botonera-wrapper">
+    <div id="botonera">
+      <button>Botón 1</button>
+      <button>Botón 2</button>
+      <button>Botón 3</button>
+      <button>Botón 4</button>
+      <button>Botón 5</button>
+      <button>Botón 6</button>
+      <button>Botón 7</button>
+      <button>Botón 8</button>
+      <button>Botón 9</button>
+      <button>Botón 10</button>
+    </div>
+  </div>
+
+  <button id="mover-izquierda" class="btn-mover">&lt;</button>
+  <button id="mover-derecha" class="btn-mover">&gt;</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var botonera = $('#botonera');
+      var botoneraWidth = botonera.outerWidth();
+      var botonWidth = botonera.find('button:first').outerWidth();
+      var offset = 0;
+
+      function moverIzquierda() {
+        offset += botonWidth;
+        if (offset > 0) {
+          offset = 0;
+        }
+        botonera.css('left', offset + 'px');
+      }
+
+      function moverDerecha() {
+        offset -= botonWidth;
+        if (offset < -(botoneraWidth - botonera.parent().width())) {
+          offset = -(botoneraWidth - botonera.parent().width());
+        }
+        botonera.css('left', offset + 'px');
+      }
+
+      $('#mover-izquierda').click(moverIzquierda);
+      $('#mover-derecha').click(moverDerecha);
+    });
+
+    var botonera = $('#botonera');
+    var wrapper = $('#botonera-wrapper');
+    var wrapperWidth = wrapper.outerWidth();
+    var botoneraWidth = botonera.outerWidth();
+    var leftPosition = botonera.position().left;
+    if (leftPosition >= 0) {
+    $('#mover-izquierda').addClass('oculto');
+    } else {
+    $('#mover-izquierda').removeClass('oculto');
+    }
+
+    if (leftPosition <= wrapperWidth - botoneraWidth) {
+    $('#mover-derecha').addClass('oculto');
+    } else {
+    $('#mover-derecha').removeClass('oculto');
+    }
+</script>
+</body>
+</html>
