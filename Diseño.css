@@ -34,12 +34,31 @@ article{
     flex-direction: column;
 }
 
+#asecundario{
+    width: 10%;
+    background-color: brown;
+    visibility: collapse;
+    overflow: hidden;
+}
+
+.articlecollapse{
+    visibility: collapse;
+}
+
+.asecundarioc{
+    visibility: visible;
+}
+
 .right{
     display: flex;
-    width: 80%;
     flex-direction: column;
+    width: 100%;
     margin-left: 20%;
     background-color: rebeccapurple;
+}
+
+.rightcollapse{
+    margin-left: 10%;
 }
 
 .musica{
@@ -55,4 +74,5 @@ main{
     background-color: beige;
     margin-top: 50px;
     height: 1000px;
+    width: 100%;
 }
