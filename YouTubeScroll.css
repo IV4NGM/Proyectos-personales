@@ -22,9 +22,29 @@
   margin-left: 100px;
   position: fixed;
   height: 50px;
-  width: 80%;
+  width: calc(80vw - 100px);
   background-color: white;
 }
+
+.carousel-wrap::before, .carousel-wrap::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
+  z-index: 1;
+  }
+
+  .carousel-wrap::before {
+  left: 0;
+  }
+
+  .carousel-wrap::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
+  }
 
 .owl-carousel .owl-nav{
   overflow: hidden;

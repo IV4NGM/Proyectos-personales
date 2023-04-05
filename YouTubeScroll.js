@@ -3,7 +3,9 @@ $('.owl-carousel').owlCarousel({
     nav: true,
     dots: false,
     navText:["<div class='nav-btn prev-slide'><img src='arrow_left.png' style='width: 12px; height: 12px' title='Anterior'></div>","<div class='nav-btn next-slide'><img src='arrow_right.png' style='width: 12px; height: 12px' title='Siguiente'></div>"],
-    responsive: {
+    autoWidth: true,
+    slideBy:3,
+/*    responsive: {
         0: {
             slideBy: 1,
             items: 1
@@ -17,4 +19,5 @@ $('.owl-carousel').owlCarousel({
             items: 6
         }
     }
+*/
     });
