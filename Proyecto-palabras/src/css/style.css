@@ -33,6 +33,36 @@ h1{
     font-size: 18px;
 }
 
+.translation{
+    margin-top: 20px;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+
+.translation > p{
+    font-size: 16px;
+}
+
+#spanish{
+    display: none;
+}
+
+.show-text{
+    display: block !important;
+    margin-left: 20px;
+}
+
+#translation-text{
+    font-weight: bold;
+    color: #0077b6;
+}
+
+#translation-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .input-div{
     display: flex;
     flex-direction: column;
@@ -49,7 +79,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 6px;
+    margin: 4px;
     margin-top: 20px;
     margin-bottom: 10px;
     /* background-color: rgb(220, 220, 220); */
